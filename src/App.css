@@ -9,7 +9,7 @@ body{
   height: 350px;
   width: 100%;
   border: none;
-  position: absolute;
+  position: absolute; 
   bottom: 60px;
   display: flex;
   background-color: rgba(0,0,128,0.9);
@@ -22,24 +22,26 @@ body{
   text-align: center;
 }
 
-.container2{
+.container2-container3{
+  display: flex;
+  width: 50%;
+}
+
+.container2, .conatiner3{
   height: 350px;
-  width: 25%; 
-  margin-right: 0px;
-  padding: 80px;
+  width: 50%;
   box-sizing: border-box;
-  text-align: left;
   display: flex;
   align-items: center;
+  text-align: left;
+}
+
+.container2{
+  padding: 80px;
 }
 
 .container3{
-  height: 350px;
-  width:25%; 
-  margin-right:0px;
-  padding: 20px;
-  display: flex;
-  align-items: center;
+  padding: 70px 20px 20px 20px;
 }
 
 .container4{
@@ -87,4 +89,52 @@ a{
   position: absolute;
   bottom: 0px;
   text-align: center;
+}
+
+@media screen and (max-width: 600px) {
+  .main-container {
+    height: auto;
+    flex-direction: column;
+  }
+
+  .container1 {
+    height: auto;
+    width: 100%;
+  }
+
+  .container2-container3 {
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .container2, .container3 {
+    height: auto;
+    width: 100%;
+    padding: 10px;
+    box-sizing: border-box;
+    padding-left: 30px
+  }
+
+  .container4 {
+    width: 100%;
+    height: auto;
+    padding-left: 10px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    box-sizing: border-box;
+  }
+
+  #shaastra-logo {
+    width: 30%;
+  }
+
+  #qr-code {
+    width: 70px;
+    height: 70px;
+  }
+
+  .h1 {
+    font-size: 1.5rem;
+  }
 }
